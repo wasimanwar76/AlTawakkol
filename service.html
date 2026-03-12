@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services - License Activities</title>
+
+    <!-- Fonts: Inter for English, Cairo for Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration for Custom Fonts and Colors -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              arabic: ["Cairo", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                dark: "#0f172a",
+                primary: "#1e3a8a",
+                light: "#3b82f6",
+                accent: "#f8fafc",
+                gray: "#64748b",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      /* Smooth scrolling and base styles */
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background-color: #0f172a; /* brand-dark */
+        background-image:
+          linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)),
+          url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    </style>
+  </head>
+  <body class="antialiased text-gray-800 pb-24 relative min-h-screen">
+    <!-- Simple Navbar -->
+    <nav
+      class="bg-brand-dark/95 backdrop-blur-md border-b border-brand-light/20 sticky top-0 z-50 shadow-lg"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col sm:flex-row justify-between items-center py-4 gap-4 sm:gap-0"
+        >
+          <!-- Company Name -->
+          <div class="flex items-center gap-3">
+            <div
+              class="p-2 bg-brand-primary rounded-lg border border-brand-light/30 shadow-[0_0_10px_rgba(59,130,246,0.3)]"
+            >
+              <i data-lucide="briefcase" class="w-5 h-5 text-brand-accent"></i>
+            </div>
+            <div class="flex flex-col text-center sm:text-left">
+              <h1
+                class="text-lg sm:text-xl font-bold text-brand-accent leading-tight"
+              >
+                Al Tawakkol
+              </h1>
+              <p
+                class="text-[10px] sm:text-xs text-brand-light font-bold uppercase tracking-widest"
+              >
+                Technical Services Co.
+              </p>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div class="flex items-center gap-6">
+            <a
+              href="./index.html"
+              class="text-brand-accent hover:text-brand-light transition-colors text-sm font-semibold flex items-center gap-1.5"
+            >
+              <i data-lucide="home" class="w-4 h-4"></i> Home
+            </a>
+            <a
+              href="./index.html#contact"
+              class="bg-brand-primary hover:bg-brand-light text-brand-accent px-5 py-2 rounded-full transition-all duration-300 text-sm font-semibold flex items-center gap-1.5 border border-brand-light/50 shadow-[0_0_10px_rgba(59,130,246,0.2)] hover:-translate-y-0.5"
+            >
+              <i data-lucide="phone-call" class="w-4 h-4"></i> Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header
+      class="text-white py-12 px-4 sm:px-6 lg:px-8 shadow-md bg-brand-dark/50 backdrop-blur-sm border-b border-brand-gray/30"
+    >
+      <div class="max-w-7xl mx-auto text-center">
+        <h1
+          class="text-3xl md:text-4xl font-bold tracking-tight mb-3 text-brand-accent"
+        >
+          License Activities
+        </h1>
+        <h2
+          class="text-2xl md:text-3xl font-arabic font-bold text-brand-light"
+          dir="rtl"
+        >
+          أنشطة الرخصة
+        </h2>
+        <div
+          class="mt-6 inline-flex items-center bg-brand-primary/80 backdrop-blur-md border border-brand-light/30 rounded-full px-4 py-1.5 text-sm font-medium"
+        >
+          <span
+            class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse shadow-[0_0_8px_rgba(74,222,128,0.8)]"
+          ></span>
+          <span class="text-brand-accent"
+            >All Services Active / جميع الخدمات فعالة</span
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Services Grid Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        id="services-grid"
+      >
+        <!-- Cards will be injected here via JavaScript -->
+      </div>
+    </main>
+
+    <!-- Floating Home Button (Bottom Left) -->
+    <a
+      href="./index.html"
+      class="fixed bottom-6 left-6 z-50 group flex items-center justify-center w-14 h-14 bg-brand-primary text-brand-accent rounded-full shadow-[0_0_15px_rgba(30,58,138,0.5)] border border-brand-light/50 hover:bg-brand-light hover:scale-110 hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(59,130,246,0.6)] transition-all duration-500 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-brand-dark focus:ring-brand-light animate-[bounce_3s_infinite]"
+      aria-label="Home"
+    >
+      <i
+        data-lucide="home"
+        class="w-6 h-6 group-hover:scale-110 transition-transform duration-300"
+      ></i>
+    </a>
+
+    <!-- Floating Contact Us Button (Bottom Right) -->
+    <a
+      href="./index.html#contact"
+      class="fixed bottom-6 right-6 z-50 group flex items-center justify-center gap-2 px-6 py-4 bg-brand-light text-brand-accent rounded-full shadow-[0_0_15px_rgba(59,130,246,0.4)] border border-brand-light hover:bg-brand-primary hover:shadow-[0_0_25px_rgba(30,58,138,0.6)] hover:-translate-y-2 transition-all duration-500 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-brand-dark focus:ring-brand-light"
+    >
+      <i data-lucide="phone-call" class="w-5 h-5 animate-pulse"></i>
+      <span class="font-semibold tracking-wide">Contact Us</span>
+    </a>
+
+    <!-- JavaScript to populate the grid and initialize icons -->
+    <script>
+      (function () {
+        "use strict";
+
+        // Disable Right Click
+        document.addEventListener("contextmenu", function (e) {
+          e.preventDefault();
+          alert("Right click is disabled!");
+        });
+
+        // Disable key shortcuts
+        document.addEventListener("keydown", function (e) {
+          if (
+            e.key === "F12" ||
+            (e.ctrlKey && e.shiftKey && e.key === "I") ||
+            (e.ctrlKey && e.shiftKey && e.key === "J") ||
+            (e.ctrlKey && e.shiftKey && e.key === "C") ||
+            (e.ctrlKey && e.key === "U")
+          ) {
+            e.preventDefault();
+            alert("Developer tools are disabled!");
+            return false;
+          }
+        });
+
+        // Disable text selection
+        document.addEventListener("selectstart", function (e) {
+          e.preventDefault();
+        });
+
+        // Disable image drag
+        document.addEventListener("dragstart", function (e) {
+          e.preventDefault();
+        });
+
+        // DevTools detection
+        setInterval(function () {
+          const threshold = 160;
+
+          if (
+            window.outerWidth - window.innerWidth > threshold ||
+            window.outerHeight - window.innerHeight > threshold
+          ) {
+            document.body.innerHTML =
+              "<h1 style='text-align:center;margin-top:20%;font-family:sans-serif;'>Developer tools detected</h1>";
+          }
+        }, 1000);
+      })();
+      // Data extracted from the provided image
+      const servicesData = [
+        {
+          en: "Wallpaper Fixing Works",
+          ar: "أعمال تركيب ورق الجدران",
+          icon: "brush",
+          image:
+            "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=600&auto=format&fit=crop",
+        },
+        {
+          en: "False Ceiling & Light Partitions Installation",
+          ar: "تركيب الأسقف المعلقة و القواطع الخفيفة",
+          icon: "layout",
+          image:
+            "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600&auto=format&fit=crop",
+        },
+        {
+          en: "Air-Conditioning, Ventilations & Air Filtration Systems Installation & Maintenance",
+          ar: "تركيب انظمة التكييف والتهوية وتنقية الهواء وصيانتها",
+          icon: "wind",
+          image:
+            "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop",
+        },
+        {
+          en: "Electrical Fittings & Fixtures Repairing & Maintenance",
+          ar: "إصلاح وصيانة التمديدات والتركيبات الكهربائية",
+          icon: "zap",
+          image:
+            "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=600&auto=format&fit=crop",
+        },
+        {
+          en: "Sanitary Installation & Pipes Repairing",
+          ar: "اصلاح التمديدات والتركيبات الصحية وتمديدات المياه",
+          icon: "droplets",
+          image:
+            "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=600&auto=format&fit=crop",
+        },
+        {
+          en: "Floor & Wall Tiling Works",
+          ar: "أعمال تبليط الأرضيات والجدران",
+          icon: "grid",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQzp5HCzYPjZJfqTwanG9v3Q6DtSnuP1GuHg&s",
+        },
+        {
+          en: "Electromechanical Equipment Installation and Maintenance",
+          ar: "اعمال تركيب المعدات الكهروميكانيكية وصيانتها",
+          icon: "settings",
+          image:
+            "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=600&auto=format&fit=crop",
+        },
+        {
+          en: "Engraving & Ornamentation Works",
+          ar: "اعمال النقش والزخرفة",
+          icon: "pen-tool",
+          image:
+            "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?q=80&w=600&auto=format&fit=crop",
+        },
+        {
+          en: "Plumbing & Sanitary Installation",
+          ar: "تركيب الأدوات والتمديدات الصحية",
+          icon: "wrench",
+          image:
+            "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=600&auto=format&fit=crop",
+        },
+        {
+          en: "Carpentry & wood Flooring Works",
+          ar: "أعمال النجارة و تركيب الأرضيات الخشبية",
+          icon: "hammer",
+          image:
+            "https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?q=80&w=600&auto=format&fit=crop",
+        },
+        {
+          en: "Building Cleaning Services",
+          ar: "خدمات تنظيف المباني والمساكن",
+          icon: "sparkles",
+          image:
+            "https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=600&auto=format&fit=crop",
+        },
+      ];
+
+      // Function to render the service cards
+      function renderServices() {
+        const container = document.getElementById("services-grid");
+
+        servicesData.forEach((service, index) => {
+          // Determine animation delay for staggered entrance
+          const delay = index * 50;
+
+          const card = document.createElement("div");
+          card.className = `bg-brand-accent rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-brand-light/20 border border-brand-gray/20 overflow-hidden flex flex-col transition-all duration-500 transform hover:-translate-y-2 opacity-0 animate-[fadeIn_0.6s_ease-out_forwards] group`;
+          card.style.animationDelay = `${delay}ms`;
+
+          card.innerHTML = `
+                    <div class="relative h-48 w-full overflow-hidden shrink-0 border-b border-brand-gray/20">
+                        <img src="${service.image}" alt="${service.en}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col backdrop-blur-sm bg-white/50">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 bg-brand-dark text-brand-light rounded-xl shadow-inner border border-brand-gray/20 z-10 -mt-12 group-hover:-translate-y-2 transition-transform duration-300">
+                                <i data-lucide="${service.icon}" class="w-6 h-6"></i>
+                            </div>
+                            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800 border border-green-300 shadow-sm">
+                                <span class="w-1.5 h-1.5 rounded-full bg-green-500 mr-1.5 animate-pulse"></span>
+                                Active / فعال
+                            </span>
+                        </div>
+                        
+                        <div class="flex-1 flex flex-col justify-center space-y-4">
+                            <!-- English Text -->
+                            <div class="border-l-4 border-brand-light pl-4">
+                                <p class="text-xs text-brand-gray font-bold uppercase tracking-wider mb-1">Activity</p>
+                                <h3 class="text-lg font-bold text-brand-dark leading-snug">${service.en}</h3>
+                            </div>
+                            
+                            <hr class="border-brand-gray/20 border-dashed" />
+                            
+                            <!-- Arabic Text -->
+                            <div class="border-r-4 border-brand-primary pr-4 text-right" dir="rtl">
+                                <p class="text-xs text-brand-gray font-bold font-arabic uppercase tracking-wider mb-1">النشاط</p>
+                                <h3 class="text-xl font-bold font-arabic text-brand-dark leading-snug">${service.ar}</h3>
+                            </div>
+                        </div>
+                    </div>
+                `;
+          container.appendChild(card);
+        });
+      }
+
+      // Add keyframes for fade in animation dynamically
+      const style = document.createElement("style");
+      style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+      document.head.appendChild(style);
+
+      // Render the UI
+      renderServices();
+
+      // Initialize Lucide Icons
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

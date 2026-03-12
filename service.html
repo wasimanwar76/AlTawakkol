@@ -158,26 +158,64 @@
       class="text-white py-12 px-4 sm:px-6 lg:px-8 shadow-md bg-brand-dark/50 backdrop-blur-sm border-b border-brand-gray/30"
     >
       <div class="max-w-7xl mx-auto text-center">
+        <!-- Title -->
         <h1
           class="text-3xl md:text-4xl font-bold tracking-tight mb-3 text-brand-accent"
         >
           License Activities
         </h1>
+
+        <!-- Arabic Title -->
         <h2
           class="text-2xl md:text-3xl font-arabic font-bold text-brand-light"
           dir="rtl"
         >
           أنشطة الرخصة
         </h2>
+
+        <!-- Active Status -->
         <div
           class="mt-6 inline-flex items-center bg-brand-primary/80 backdrop-blur-md border border-brand-light/30 rounded-full px-4 py-1.5 text-sm font-medium"
         >
           <span
             class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse shadow-[0_0_8px_rgba(74,222,128,0.8)]"
           ></span>
-          <span class="text-brand-accent"
-            >All Services Active / جميع الخدمات فعالة</span
+          <span class="text-brand-accent">
+            All Services Active / جميع الخدمات فعالة
+          </span>
+        </div>
+
+        <!-- Divider -->
+        <div class="mt-8 w-24 h-1 bg-brand-accent mx-auto rounded-full"></div>
+
+        <!-- Contact Info -->
+        <div
+          class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm md:text-base text-brand-light"
+        >
+          <!-- Address -->
+          <div
+            class="bg-brand-primary/30 border border-brand-gray/30 rounded-xl p-4 backdrop-blur-sm"
           >
+            <p class="font-semibold text-brand-accent mb-1">Office Address</p>
+            <p>Al Khabaisi, Dubai, UAE</p>
+            <p>P.O. Box: 128-429</p>
+          </div>
+
+          <!-- Landline -->
+          <div
+            class="bg-brand-primary/30 border border-brand-gray/30 rounded-xl p-4 backdrop-blur-sm"
+          >
+            <p class="font-semibold text-brand-accent mb-1">Landline</p>
+            <p>+971 4 566 3494</p>
+          </div>
+
+          <!-- Mobile -->
+          <div
+            class="bg-brand-primary/30 border border-brand-gray/30 rounded-xl p-4 backdrop-blur-sm"
+          >
+            <p class="font-semibold text-brand-accent mb-1">Mobile</p>
+            <p>+971 52 687 5573</p>
+          </div>
         </div>
       </div>
     </header>
@@ -407,19 +445,14 @@
       // Initialize Lucide Icons
       lucide.createIcons();
 
+      (function () {
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
 
-(function () {
-
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    menuBtn.addEventListener("click", function () {
-
-        mobileMenu.classList.toggle("hidden");
-
-    });
-
-})();
+        menuBtn.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+      })();
     </script>
   </body>
 </html>
